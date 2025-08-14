@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "subenv"
+dynamic = ["version"]
+description = "Subprocess virtual environments"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["subprocess", "virtual environments", "venv"]
+
+authors = [
+  { name = "Cliff Kerr", email = "info@sciris.org" },
+]
+
+classifiers = [
+  "Intended Audience :: Science/Research",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Development Status :: 5 - Production/Stable",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13"
+]
+
+dependencies = [
+    "sciris",
+    "execnet",
+    "cloudpickle",
+]
+
+[project.urls]
+"Website" = "https://sciris.org"
+"Source" = "https://github.com/sciris/subenv/"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["subenv*"]
+
+[tool.setuptools.dynamic]
+version = {attr = "subenv.version.__version__"}
