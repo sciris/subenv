@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "subenv"
 dynamic = ["version"]
-description = "Subprocess virtual environments"
+description = "Run virtual environments in subprocesses"
 readme = "README.md"
 requires-python = ">=3.9"
 license = "MIT"

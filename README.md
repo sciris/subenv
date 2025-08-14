@@ -1,6 +1,6 @@
 # Subenv
 
-Python package that lets you run multiple versions of code in parallel in a single interpreter session. Example:
+Python package that lets you run multiple versions of code in parallel in a single interpreter session via virtual environments. Example:
 
 ```py
 import subenv
